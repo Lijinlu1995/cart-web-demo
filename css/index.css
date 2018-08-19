@@ -76,5 +76,82 @@
 }
 
 .screen02 {
+    background: url("../images/02-bg.png") no-repeat center bottom;
+}
+.screen02 .goods{
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    bottom: 210px;
+    transform-origin: right bottom;
+    transform: scale(0);
+}
+.screen02.mow .goods{
+    transform: none;
+    transition: none;
+}
+.screen02 .sofa{
+    position: absolute;
+    transform: scale(0.5);
+    left: 292px;
+    top: 132px;
+    opacity: 0;
+}
+.screen02 .input{
+    position: absolute;
+    right: 171px;
+    top: 120px;
+    opacity: 0;
+    /*默认的转换原点是在中心，要改为右上角*/
+    transform-origin: right top;
+}
+.screen02 .input .search{}
+.screen02 .input .key {
+    position: absolute;
+    left: 100px;
+    top: 4px;
+    opacity: 0;
+}
+.screen02.now .input{
+    animation: input01 3s linear forwards;
+}
+.screen02.now .input .key{
+    opacity: 1;
+    transition: all 1s linear 1s;
+}
 
+.screen02 .text {
+    text-align: center;
+}
+.screen02 .text .text01{
+
+ }
+.screen02 .text .text02{
+    position: absolute;
+    opacity: 0;
+}
+.screen02.now .text .text01{
+    position: absolute;
+    opacity: 0;
+}
+.screen02.now .text .text02{
+    position: static;
+    opacity: 1;
+    transition: opacity 1s;
+}
+@keyframes input01 {
+    0%{
+        transform:translate(2000px, 130px);
+        opacity: 1;
+    }
+    33.33%{
+        transform:translate(-170px, 130px);
+    }
+    67%{
+        transform:translate(-170px, 130px);
+    }
+    100%{
+        transform: scale(0.7);
+        opacity: 1;
+    }
 }
