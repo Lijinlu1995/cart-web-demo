@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车宣传</title>
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--公用元素-->
+<a href="#" class="go"><img src="images/00-go.png" alt=""></a>
+<a href="#" class="more"><img src="images/00-more.png" alt=""></a>
+<!--结构-->
+<div class="container">
+    <!--每一个切换的屏幕-->
+    <!--1.指示器，电容器-->
+    <!--如果是大屏幕，基于top定位会脱离显示区域，用一个固定大小的容器来装内容-->
+    <div class="section screen01">
+        <!--背景-->
+        <div class="content">
+            <div class="goods"><img src="images/01-goods.png" alt=""></div>
+            <div class="sofa"><img src="images/01-sofa.png" alt=""></div>
+            <div class="fly"><img src="images/01-fly.png" alt=""></div>
+        </div>
+    </div>
+    <!--第二屏  完全进入当前屏时执行动画-->
+    <!--给大容器追加一个类，在这个类下给需要做动画的元素添加动画属性-->
+    <div class="section screen02">
+        
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullpage.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
