@@ -11,6 +11,23 @@ $(function () {
         afterLoad:function (link,index) {
             /*index 序号 1开始  当前屏的序号*/
             $('.section').eq(index-1).addClass('now');
-        }
+        },
+        afterRender:function () {
+            $('more').on('click',function () {
+                $.fn.fullpage.moveSectionDown();
+            });
+        },
+        /*onleave*/
+        onLeave:function (index,nextIndex,direction) {
+            if(index == 2 && nextIndex == 3){
+                /*当前是从第二页到第三页*/
+                console.log("OK");
+                $('.section').eq(index-1).addClass('leaved');
+            }else if(index == 3 && nextIndex == 4){
+                /*当前是从第三页到第四页*/
+                $('.section').eq(index-1).addClass('leaved');
+            }
+        },
+        scrollingSpeed:1000
     })
 })

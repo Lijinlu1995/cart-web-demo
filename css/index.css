@@ -86,9 +86,9 @@
     transform-origin: right bottom;
     transform: scale(0);
 }
-.screen02.mow .goods{
+.screen02.now .goods{
     transform: none;
-    transition: none;
+    transition: all 1s linear 2s;
 }
 .screen02 .sofa{
     position: absolute;
@@ -96,6 +96,7 @@
     left: 292px;
     top: 132px;
     opacity: 0;
+    z-index: 1;
 }
 .screen02 .input{
     position: absolute;
@@ -154,4 +155,51 @@
         transform: scale(0.7);
         opacity: 1;
     }
+}
+.screen02.leaved .sofa{
+    animation: sofa02 1s linear forwards;
+}
+@keyframes sofa02 {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        /*沙发下移*/
+        transform: translate(-80px,700px);
+    }
+}
+.screen03 {
+    background: url("../images/03-bg.png") no-repeat center;
+}
+.screen03.leaved text {
+
+}
+.screen03 .change{
+    position: absolute;
+    right: 11px;
+    bottom: 170px;
+}
+.screen03 .change img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.screen03 .cart img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.screen03 .cart{
+    position: absolute;
+    right: 192px;
+    bottom: 100px;
+}
+.screen03.now .change img:last-child{
+      position: static;
+      opacity: 1;
+      transition: all 1s linear;
+  }
+.screen03.now .cart img:last-child{
+    position: static;
+    opacity: 1;
+    transition: all 1s linear;
 }
